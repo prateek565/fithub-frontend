@@ -1,4 +1,4 @@
-import logo from './logo.png';
+import logo from './logo2.png';
 import './App.css';
 import Navbar from './pages/step5/pages/Navbar';
 import AllRoutes from './routes/AllRoutes';
