@@ -41,7 +41,7 @@ const SingleProductPage = () => {
   useEffect( () => {
 
     try{
-    fetch("http://localhost:8080/products/" + id)
+    fetch("https://fitness-hub-backend.onrender.com/products/" + id)
      .then((res)=>res.json())
      .then((res)=>{
       setSingle(res)

@@ -27,7 +27,7 @@ import { ACTION_GET_PRODUCTS } from "../../../redux/products/product.actions";
 import { ACTION_ADD_PRODUCT, ACTION_DELETE_PRODUCT } from "../../../redux/admin/admin.actions";
 // import axios from "axios";
 // const getData = async () => {
-//   let { data } = await axios.get("http://localhost:8080/products");
+//   let { data } = await axios.get("https://fitness-hub-backend.onrender.com/products");
 //   console.log(data.length);
 //   return data;
 // };

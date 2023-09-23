@@ -31,7 +31,7 @@ ADD_ITEM_TOCART_FROM_WISHLIST_ERROR,
 export const ACTION_GET_CART = (token) => async (dispatch) => {
   dispatch({ type: GET_CART_ITEMS_LOADING });
   try {
-    let res = await axios.get("http://localhost:8080/cart");
+    let res = await axios.get("https://fitness-hub-backend.onrender.com/cart");
     //   console.log(res.data)
     const unique = res.data.find((el) => el.token == token);
     // console.log(unique)
@@ -47,7 +47,7 @@ export const ACTION_ADD_ITEM_TO_CART =
     dispatch({ type: ADD_ITEM_TO_CART_LOADING });
 
     try {
-      await axios.post("http://localhost:8080/cart", payload)
+      await axios.post("https://fitness-hub-backend.onrender.com/cart", payload)
      .then((res)=> console.log(res.message))
      .catch((err)=> console.log(err.message))
      
@@ -69,7 +69,7 @@ export const ACTION_ADD_ITEM_TO_CART =
    
   //  console.log(payload)
     try{
-      await axios.patch(`http://localhost:8080/cart`, payload)
+      await axios.patch(`https://fitness-hub-backend.onrender.com/cart`, payload)
 
       return dispatch({ type : REMOVE_CART_ITEMS_SUCCESS })
          
@@ -87,7 +87,7 @@ export const ACTION_PURCHASE = (payload={})=> async (dispatch)=>{
   console.log(payload)
 
     try{
-      await axios.patch(`http://localhost:8080/cart/purchase`, {email: payload})
+      await axios.patch(`https://fitness-hub-backend.onrender.com/cart/purchase`, {email: payload})
 
       return dispatch({ type : PURCHASE_SUCCESS })
          
@@ -105,7 +105,7 @@ export const ACTION_ADD_ITEM_TO_WISHLIST =
     dispatch({ type: ADD_ITEM_TO_WISHLIST_LOADING });
 
     try {
-      await axios.post("http://localhost:8080/cart/wishlist", payload)
+      await axios.post("https://fitness-hub-backend.onrender.com/cart/wishlist", payload)
      .then((res)=> console.log(res.message))
      .catch((err)=> console.log(err.message))
      
@@ -128,7 +128,7 @@ export const ACTION_ADD_ITEM_TO_WISHLIST =
     dispatch({ type: ADD_ITEM_TOCART_FROM_WISHLIST_LOADING });
 
     try {
-      await axios.patch("http://localhost:8080/cart/move", payload)
+      await axios.patch("https://fitness-hub-backend.onrender.com/cart/move", payload)
      .then((res)=> console.log(res.message))
      .catch((err)=> console.log(err.message))
      
@@ -158,7 +158,7 @@ export const ACTION_ADD_ITEM_TO_WISHLIST =
 //     dispatch({ type: REMOVE_CART_ITEMS_LOADING });
 
 //     try {
-//       await axios.post(`http://localhost:8080/cart/${payload.id}`, payload);
+//       await axios.post(`https://fitness-hub-backend.onrender.com/cart/${payload.id}`, payload);
 //       //console.log(payload);
 //       return dispatch({ type: REMOVE_CART_ITEMS_SUCCESS });
 //     } catch (err) {
@@ -177,7 +177,7 @@ export const ACTION_ADD_ITEM_TO_WISHLIST =
 //  // No need to have body, because we don't send nothing to the server.
 // }
 // // Make the HTTP Delete call using fetch api
-// fetch(`http://localhost:8080/cart`, deleteMethod) 
+// fetch(`https://fitness-hub-backend.onrender.com/cart`, deleteMethod) 
 // .then(response => response.json())
 // .then(data => console.log(data)) // Manipulate the data retrieved back, if we want to do something with it
 // .catch(err

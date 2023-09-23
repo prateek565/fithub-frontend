@@ -20,7 +20,7 @@ import {
 import {Link} from "react-router-dom"
 // import axios from "axios";
 // const getData = async () => {
-//   let { data } = await axios.get("http://localhost:8080/products");
+//   let { data } = await axios.get("https://fitness-hub-backend.onrender.com/products");
 //   console.log(data.length);
 //   return data;
 // };
